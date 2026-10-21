@@ -1,0 +1,26 @@
+# Claude Code
+.claude/
+
+# C/C++ build outputs
+*.exe
+*.out
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.dll
+*.pdb
+*.ilk
+build/
+bin/
+obj/
+
+# Editor
+.vscode/
+.idea/
+
+# OS
+Thumbs.db
+Desktop.ini
+.DS_Store
