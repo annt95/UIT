@@ -1,35 +1,11 @@
 #include <iostream>
-#include <string>
+
 #include <vector>
+#include <string>
+#include <cstdint>
+#include <string_view>
 
 using namespace std;
-
-void Input(vector<string>& a, int n) {
-    string word;
-    a.reserve(n);
-    for (int i = 0; i < n; ++i) {
-        cin >> word;
-        a.push_back(word);
-    }
-}
-
-int BinarySearch(const vector<string>& a, const string& x) {
-    int first = 0;
-    int last = static_cast<int>(a.size()) - 1;
-
-    while (first <= last) {
-        int mid = first + (last - first) / 2;
-        if (a[mid] == x) {
-            return mid + 1;
-        }
-        if (a[mid] > x) {
-            last = mid - 1;
-        } else {
-            first = mid + 1;
-        }
-    }
-    return -1;
-}
 
 int main() {
     ios::sync_with_stdio(false);
@@ -37,11 +13,40 @@ int main() {
 
     int n;
     cin >> n;
-    vector<string> words;
-    Input(words, n);
 
-    string query;
-    cin >> query;
-    cout << BinarySearch(words, query) << '\n';
+    vector<uint32_t> offsets(n + 1);
+    string words;
+    for (int i = 0; i < n; i++) {
+        string word;
+        cin >> word;
+        offsets[i] = static_cast<uint32_t>(words.size());
+        words += word;
+    }
+    offsets[n] = static_cast<uint32_t>(words.size());
+
+    string q;
+    cin >> q;
+
+    int left = 0, right = n - 1;
+    int answer = -1;
+
+    while (left <= right) {
+        int mid = left + (right - left) / 2;
+        
+        string_view word(words.data() + offsets[mid], offsets[mid + 1] - offsets[mid]);
+
+        if (word == q) {
+            answer = mid + 1; 
+            right = mid - 1;
+        } 
+        else if (word < q) {
+            left = mid + 1;
+        } 
+        else {
+            right = mid - 1;
+        }
+    }
+
+    cout << answer << endl;
     return 0;
 }
