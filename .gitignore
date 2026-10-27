@@ -24,3 +24,8 @@ obj/
 Thumbs.db
 Desktop.ini
 .DS_Store
+
+# Ignore build artifacts
+NMLT/*
+!NMLT/*.cpp
+*.dSYM/
