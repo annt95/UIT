@@ -1,0 +1,5 @@
+So thuc: 0 0
+So nguyen: 1 0
+So thuc: 1.5 0
+So nguyen: 1 2
+So thuc: 1.5 2.5
