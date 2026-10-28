@@ -4,7 +4,12 @@ project(UIT LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-add_executable(d1_2 DSA/D1/D1_2.cpp)
+add_executable(d1_2 DSA/D1/D1_2.cpp
+        DSA/D2/Bai1.cpp
+        DSA/D2/Bai1.h
+        DSA/D2/D2_2.cpp
+        DSA/D2/D2_2.h
+        DSA/D2/D2_3.cpp)
 add_executable(D1_demo OOP/D1/D1_demo.cpp)
 
 add_executable(oop_bai1 OOP/D1/Bai1.cpp)
