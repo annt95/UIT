@@ -6,7 +6,13 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
 add_executable(d1_1 DSA/D1/D1_1.cpp)
-add_executable(TH01 DSA/D4/TH01.cpp)
+add_executable(TH01 DSA/D4/TH01.cpp
+        DSA/TH01/D2/b2.cpp
+        DSA/TH01/D2/b2.h
+        DSA/TH01/D2/b3.cpp
+        DSA/TH01/D2/b3.h
+        DSA/D4/TH02.cpp
+        DSA/D4/TH03.cpp)
 add_executable(d1_2 DSA/D1/D1_2.cpp)
 add_executable(d1_3 DSA/D1/D1_3.cpp)
 add_executable(d1_4 DSA/D1/D1_4.cpp)
