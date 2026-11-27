@@ -29,3 +29,6 @@ Desktop.ini
 NMLT/*
 !NMLT/*.cpp
 *.dSYM/
+
+# Course reference materials (slide PDF, header mau cua thay)
+tailieu/
