@@ -6,13 +6,11 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
 add_executable(d1_1 DSA/D1/D1_1.cpp)
-add_executable(TH01 DSA/D4/TH01.cpp
-        DSA/TH01/D2/b2.cpp
-        DSA/TH01/D2/b2.h
-        DSA/TH01/D2/b3.cpp
-        DSA/TH01/D2/b3.h
-        DSA/D4/TH02.cpp
-        DSA/D4/TH03.cpp)
+add_executable(TH01 DSA/D4/TH01.cpp)
+add_executable(TH02 DSA/D4/TH02.cpp)
+add_executable(TH03 DSA/D4/TH03.cpp)
+add_executable(TH01_D2_b2 DSA/TH01/D2/b2.cpp DSA/TH01/D2/b2.h)
+add_executable(TH01_D2_b3 DSA/TH01/D2/b3.cpp DSA/TH01/D2/b3.h)
 add_executable(d1_2 DSA/D1/D1_2.cpp)
 add_executable(d1_3 DSA/D1/D1_3.cpp)
 add_executable(d1_4 DSA/D1/D1_4.cpp)
@@ -25,6 +23,7 @@ add_executable(D3_demo DSA/D3/D3_Demo.cpp)
 add_executable(D3_5 DSA/D3/5.cpp)
 add_executable(D3_6 DSA/D3/6.cpp)
 add_executable(D3_7 DSA/D3/7.cpp)
+add_executable(D5_01 DSA/D5/01.cpp)
 
 add_executable(D1_demo OOP/D1/D1_demo.cpp)
 add_executable(oop_bai1 OOP/D1/Bai1.cpp)
